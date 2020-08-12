@@ -131,7 +131,7 @@ function startGame(){
       document.querySelector(`#${whichScore}`).innerHTML = `Current Score: ${score}`;
     } else {
       //update highscore if new score is better
-      if (score < highScore) {
+      if (score < highScore || highScore === 0) {
         localStorage.setItem('highScore', score);
         document.querySelector(`#${whichScore}`).innerHTML = `High Score: ${score}`;
       }
